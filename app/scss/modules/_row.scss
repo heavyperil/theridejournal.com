@@ -2,6 +2,11 @@
   width: 100%;
 }
 
+.row > section {
+  @include centered;
+  padding: 2rem;
+}
+
 .row--bordered {
   @extend .row;
   border-bottom: 1px solid $color-hairlines;
@@ -13,6 +18,10 @@
   top: 0;
   z-index: 999;
   background-color: $color-bg;
+}
+
+.row--header-offset {
+  margin-top: $header-height;
 }
 
 .row--toothy {

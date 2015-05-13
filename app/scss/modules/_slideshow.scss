@@ -1,0 +1,15 @@
+.slideshow {
+  position: relative;
+  height: 63.8rem;
+}
+
+.slideshow .slide {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slideshow .slide.slide--visible {
+  display: block;
+}

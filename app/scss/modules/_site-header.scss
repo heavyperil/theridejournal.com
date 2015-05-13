@@ -1,6 +1,6 @@
 .site-header {
   @include centered;
-  height: 14rem;
+  height: $header-height;
   padding: 1.8rem 2rem;
 }
 
