@@ -16,6 +16,7 @@ var autoprefixer = require('gulp-autoprefixer'),
 // Configuration
 
 var paths = {
+  fonts: ['./app/fonts/*'],
   html:  ['./app/*.html'],
   img:   ['./app/images/**/*'],
   js:    ['./app/js/**/*.js'],
@@ -39,7 +40,12 @@ gulp.task('clean', function(cb) {
 });
 
 gulp.task('compile', ['clean'], function() {
-  runSequence(['images', 'javascript', 'jspm', 'stylesheets', 'templates']);
+  runSequence(['fonts', 'images', 'javascript', 'jspm', 'stylesheets', 'templates']);
+});
+
+gulp.task('fonts', function() {
+  return gulp.src(paths.fonts)
+    .pipe(gulp.dest('./dist/fonts'));
 });
 
 gulp.task('images', function() {
