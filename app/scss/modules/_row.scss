@@ -1,0 +1,26 @@
+.row {
+  width: 100%;
+}
+
+.row--bordered {
+  @extend .row;
+  border-bottom: 1px solid $color-hairlines;
+}
+
+.row--fixed {
+  @extend .row;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-color: $color-bg;
+}
+
+.row--toothy {
+  @extend .row;
+  background: {
+    color: $color-sepia;
+    image: url(../images/bg/footer-teeth.png);
+    repeat: repeat-x;
+    position: top left;
+  }
+}

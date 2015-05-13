@@ -1,0 +1,45 @@
+.site-header {
+  @include centered;
+  height: 10.4rem;
+  padding: 1.8rem 2rem;
+}
+
+.site-header__brand {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+.site-header__nav {
+  font-family: $font-sans;
+  text-transform: uppercase;
+}
+
+.site-header__nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+.site-header__nav li,
+.site-header__nav a {
+  display: inline-block;
+}
+
+.site-header__nav li {
+  list-style-type: none;
+}
+
+.site-header__nav a {
+  padding: 1rem;
+  margin-right: 3.8rem;
+  color: $color-emphasis;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+
+  &:hover {
+    background-color: $color-hover-bg;
+  }
+}
+
+.site-header__nav li:last-child a {
+  margin-right: 0;
+}

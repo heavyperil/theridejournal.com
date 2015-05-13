@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $color-copy;
+  background-color: $color-bg;
+  font: {
+    family: $font-serif;
+    size: 1.7rem;
+  }
+}
+
+h1,
+h2 {
+  font-family: $font-sans;
+  margin: 0;
+}
+
+h3 {
+  font: {
+    size: 1.7rem;
+    weight: normal;
+  }
+}
+
+a {
+  color: $color-copy;
+  text-decoration: none;
+}
