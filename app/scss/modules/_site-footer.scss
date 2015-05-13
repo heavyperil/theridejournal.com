@@ -2,3 +2,23 @@
   @include centered;
   padding: 3.4rem 0;
 }
+
+.site-footer__friends {
+  position: relative;
+  padding: 0;
+  border: {
+    top: 1px solid $color-grey;
+    bottom: 1px solid $color-grey;
+  }
+  text-align: center;
+}
+
+.site-footer__friends li {
+  display: inline-block;
+}
+
+.site-footer__copyright {
+  padding: 10rem 0;
+  font-style: italic;
+  text-align: center;
+}
