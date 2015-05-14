@@ -1,0 +1,48 @@
+.order {}
+
+.order--cover-image,
+.order--detail {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+}
+
+.order--cover-image {
+  padding-right: 2rem;
+}
+
+.order--detail {
+  padding-left: 2rem;
+}
+
+.order--form fieldset {
+  border: none;
+  padding: 0;
+}
+
+.order--form legend,
+.order--form label,
+.order--form button {
+  font: {
+    family: $font-form;
+    weight: bold;
+  }
+  color: $color-dark-grey;
+}
+
+.order--form legend {
+  margin-bottom: 1rem;
+}
+
+.order--form label {
+  font-size: 1.2rem;
+}
+
+.order--shipping-options {
+  list-style-type: none;
+  padding: 0;
+}
+
+.order--paypal-logo {
+  vertical-align: middle;
+}

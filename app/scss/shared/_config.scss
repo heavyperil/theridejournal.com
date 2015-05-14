@@ -1,20 +1,22 @@
 // Fonts
 $font-serif:  'Apollo W02', Georgia, serif;
 $font-sans:   'Gill Sans W01 Medium', Helvetica, sans-serif;
+$font-form:   Helvetica, Arial, sans-serif;
 
 // Colours
-$color-white:        rgb(255, 255, 255);
-$color-grey:         rgb(148, 146, 143);
-$color-light-grey:   rgb(235, 235, 233);
-$color-medium-grey:  rgb(242, 242, 242);
-$color-dark-grey:    rgb(90, 86, 81);
-$color-dark-red:     rgb(129, 37, 6);
-$color-sepia:        rgb(243, 243, 240);
-$color-bg:           $color-white;
-$color-copy:         $color-grey;
-$color-emphasis:     $color-dark-grey;
-$color-hairlines:    $color-light-grey;
-$color-hover-bg:     $color-medium-grey;
+$color-white:             rgb(255, 255, 255);
+$color-grey:              rgb(148, 146, 143);
+$color-light-grey:        rgb(235, 235, 233);
+$color-medium-grey:       rgb(242, 242, 242);
+$color-medium-dark-grey:  rgb(202, 202, 202);
+$color-dark-grey:         rgb(90, 86, 81);
+$color-dark-red:          rgb(129, 37, 6);
+$color-sepia:             rgb(243, 243, 240);
+$color-bg:                $color-white;
+$color-copy:              $color-grey;
+$color-emphasis:          $color-dark-grey;
+$color-hairlines:         $color-light-grey;
+$color-hover-bg:          $color-medium-grey;
 
 // Layout
 $header-height: 14rem;

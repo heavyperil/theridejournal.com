@@ -1,0 +1,11 @@
+.button {
+  padding: 0.8em 2em;
+  background-image: linear-gradient(to bottom, white, $color-medium-grey);
+  border: 1px solid $color-medium-dark-grey;
+  font-size: 1.2rem;
+}
+
+.button__order {
+  margin-right: 1rem;
+  vertical-align: middle;
+}
