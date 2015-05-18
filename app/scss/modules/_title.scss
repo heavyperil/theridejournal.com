@@ -1,0 +1,15 @@
+.title {
+  margin: 0;
+  font: {
+    family: $font-sans;
+    size: 2.8rem;
+    weight: normal;
+  }
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $color-dark-grey;
+}
+
+.title--centered {
+  text-align: center;
+}
