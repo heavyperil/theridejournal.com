@@ -1,11 +1,14 @@
 .site-header {
   @include centered;
-  height: $header-height;
+  min-height: $header-height;
   padding: 1.8rem 2rem;
 }
 
 .site-header__brand {
-  font-size: 4rem;
+  font: {
+    size: 4rem;
+    weight: normal;
+  }
   text-transform: uppercase;
 }
 
