@@ -4,16 +4,14 @@
 
 .row > section {
   @include centered;
-  padding: 2rem;
+  padding: 16.4rem 2rem;
 }
 
 .row--bordered {
-  @extend .row;
   border-bottom: 1px solid $color-hairlines;
 }
 
 .row--fixed {
-  @extend .row;
   position: fixed;
   top: 0;
   z-index: 999;
@@ -25,7 +23,6 @@
 }
 
 .row--toothy {
-  @extend .row;
   background: {
     color: $color-sepia;
     image: url(../images/bg/footer-teeth.png);
