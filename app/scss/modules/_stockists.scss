@@ -1,0 +1,80 @@
+.stockists__title,
+.stockists__nav--centered {
+  text-align: center;
+}
+
+.stockists__nav--centered {
+  margin: 3rem 0;
+}
+
+.stockists__nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.stockists__nav li {
+  display: inline-block;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.stockists__nav li:hover {
+  color: $color-dark-grey;
+}
+
+.stockists__nav li:before {
+  content: '·';
+  margin-right: 1rem;
+}
+
+.stockists__nav li:first-child:before {
+  content: none;
+}
+
+.stockists__master,
+.stockists__detail {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.stockists__master {
+  width: 33%;
+}
+
+.stockists__detail {
+  width: 66%;
+  padding-left: 4rem;
+}
+
+.stockists__list {
+  list-style-type: none;
+  display: none;
+  padding: 0;
+}
+
+.stockists__list--visible {
+  display: inline-block;
+}
+
+.stockists__list li {
+  cursor: pointer;
+  margin-bottom: 0.6rem;
+}
+
+.stockists__list li:hover {
+  color: $color-dark-grey;
+}
+
+.stockists__map,
+.stockists_address {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.stockists__map {
+  border: 1rem solid white;
+  width: 26rem;
+  height: 26rem;
+  box-shadow: 0 0 6px grey;
+}

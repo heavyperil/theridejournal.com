@@ -43,6 +43,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: $color-dark-grey;
+}
+
 h3,
 p,
 legend,
