@@ -129,6 +129,10 @@ gulp.task('rev', function() {
   .pipe(gulp.dest('dist'));
 });
 
+gulp.task('dev', function() {
+  runSequence('compile', 'browser-sync', 'watch');
+});
+
 gulp.task('build', ['clean'], function() {
   runSequence(['files', 'fonts', 'images', 'buildJS', 'stylesheets', 'templates'], 'html', 'rev');
 });
@@ -136,8 +140,4 @@ gulp.task('build', ['clean'], function() {
 gulp.task('deploy', function() {
   return gulp.src('./dist/**/*')
     .pipe(ghPages());
-});
-
-gulp.task('default', function() {
-  runSequence('compile', 'browser-sync', 'watch');
 });
