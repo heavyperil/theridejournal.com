@@ -5,17 +5,23 @@
 var autoprefixer = require('gulp-autoprefixer'),
     browserSync  = require('browser-sync'),
     del          = require('del'),
+    ghPages      = require('gulp-gh-pages'),
     gulp         = require('gulp'),
+    htmlreplace  = require('gulp-html-replace'),
     imagemin     = require('gulp-imagemin'),
     reload       = browserSync.reload,
+    RevAll       = require('gulp-rev-all'),
     runSequence  = require('run-sequence'),
     sass         = require('gulp-sass'),
+    shell        = require('gulp-shell'),
+    size         = require('gulp-size'),
     sourcemaps   = require('gulp-sourcemaps');
 
 
 // Configuration
 
 var paths = {
+  files: ['./app/CNAME'],
   fonts: ['./app/fonts/*'],
   html:  ['./app/*.html'],
   img:   ['./app/images/**/*'],
@@ -40,7 +46,7 @@ gulp.task('clean', function(cb) {
 });
 
 gulp.task('compile', ['clean'], function() {
-  runSequence(['fonts', 'images', 'javascript', 'jspm', 'stylesheets', 'templates']);
+  runSequence(['files', 'fonts', 'images', 'javascript', 'jspm', 'stylesheets', 'templates']);
 });
 
 gulp.task('fonts', function() {
@@ -82,6 +88,11 @@ gulp.task('templates', function() {
     .pipe(gulp.dest('./dist'));
 });
 
+gulp.task('files', function() {
+  return gulp.src(paths.files)
+    .pipe(gulp.dest('./dist'));
+});
+
 gulp.task('watch', function() {
   gulp.watch(paths.html, ['templates']);
   gulp.watch(paths.img,  ['images']);
@@ -89,6 +100,42 @@ gulp.task('watch', function() {
   gulp.watch(paths.scss, ['stylesheets']);
 
   gulp.watch('./dist/*.html').on('change', reload);
+});
+
+gulp.task('buildJS', shell.task([
+  'jspm bundle-sfx app/js/main dist/js/app.js --minify'
+]));
+
+gulp.task('html', function () {
+  gulp.src('./dist/index.html')
+  .pipe(htmlreplace({
+    'js': {
+      src: 'js/app.js',
+      tpl: '<script src="%s" async defer></script>'
+    }
+  }))
+  .pipe(gulp.dest('dist'));
+});
+
+gulp.task('rev', function() {
+  var revAll = new RevAll({dontRenameFile: [/\.html/, /CNAME$/]});
+
+  gulp.src('dist/**')
+  .pipe(revAll.revision())
+  .pipe(size({
+    showFiles: true,
+    gzip: true
+  }))
+  .pipe(gulp.dest('dist'));
+});
+
+gulp.task('build', ['clean'], function() {
+  runSequence(['files', 'fonts', 'images', 'buildJS', 'stylesheets', 'templates'], 'html', 'rev');
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
 });
 
 gulp.task('default', function() {
