@@ -5,6 +5,7 @@
 }
 
 .site-header__brand {
+  margin-bottom: 1rem;
   font: {
     size: 4rem;
     weight: normal;
@@ -37,6 +38,7 @@
   color: $color-emphasis;
   text-decoration: none;
   letter-spacing: 0.08em;
+  line-height: 1;
 
   &:hover {
     background-color: $color-hover-bg;

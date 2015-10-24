@@ -38,6 +38,10 @@ a:hover {
   color: $color-dark-grey;
 }
 
+p {
+  margin-top: 0;
+}
+
 h3,
 p,
 legend,
@@ -49,3 +53,6 @@ em {
   font-style: normal;
   color: $color-dark-grey;
 }
+ ul {
+   margin-top: 0;
+ }

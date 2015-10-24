@@ -7,10 +7,14 @@
   margin: 3rem 0;
 }
 
+.stockists__nav--hidden {
+  display: none;
+}
+
 .stockists__nav ul {
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 1.2rem 0;
 }
 
 .stockists__nav li {
@@ -62,19 +66,25 @@
   margin-bottom: 0.6rem;
 }
 
+.stockists__list .selected,
 .stockists__list li:hover {
   color: $color-dark-grey;
 }
 
 .stockists__map,
-.stockists_address {
+.stockists__address {
   display: inline-block;
   vertical-align: top;
 }
 
 .stockists__map {
+  width: 28rem;
+  height: 28rem;
+  margin-bottom: 4rem;
   border: 1rem solid white;
-  width: 26rem;
-  height: 26rem;
   box-shadow: 0 0 6px grey;
+}
+
+.stockists__address {
+  margin-left: 4rem;
 }

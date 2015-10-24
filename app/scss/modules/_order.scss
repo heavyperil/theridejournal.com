@@ -11,6 +11,10 @@
   padding-right: 2rem;
 }
 
+.order--cover-image img {
+  width: 100%;
+}
+
 .order--detail {
   padding-left: 2rem;
 }
@@ -21,8 +25,7 @@
 }
 
 .order--form legend,
-.order--form label,
-.order--form button {
+.order--form label {
   font: {
     family: $font-form;
     weight: bold;

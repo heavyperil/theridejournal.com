@@ -20,7 +20,7 @@
         <h1 class="site-header__brand"><a href="/">The Ride Journal</a></h1>
         <nav class="site-header__nav">
           <ul>
-            <li><a href="/#order">Order<br>a copy</a></li><li><a href="/#stockists">Our<br>stockists</a></li><li><a href="/#past-issues">Download<br>past issues</a></li><li><a href="/#contribute">How to<br>contribute</a></li><li><a href="/#our-history">Our<br>history</a></li><li><a href="/#contact" class="last">Mailing list<br>& contact</a></li>
+            <li><a href="#order">Order<br>a copy</a></li><li><a href="#stockists">Our<br>stockists</a></li><li><a href="#past-issues">Download<br>past issues</a></li><li><a href="#contribute">How to<br>contribute</a></li><li><a href="#our-history">Our<br>history</a></li><li><a href="#contact" class="last">Mailing list<br>& contact</a></li>
           </ul>
         </nav>
       </header>
@@ -29,11 +29,10 @@
     <div class="row row--bordered">
       <section id="home">
         <div class="slideshow">
-          <a href="#order"><img class="slide slide--visible" src="images/slides/front_cover.jpg" alt="The Ride Journal"></a>
-          <img class="slide" src="images/slides/slide-001.jpg" alt="The Ride Journal">
-          <img class="slide" src="images/slides/slide-002.jpg" alt="The Ride Journal">
-          <img class="slide" src="images/slides/slide-003.jpg" alt="The Ride Journal">
-          <img class="slide" src="images/slides/slide-004.jpg" alt="The Ride Journal">
+          <div class="slide slide__001 slide--visible" title="The Ride Journal"></div>
+          <div class="slide slide__002" title="The Ride Journal"></div>
+          <div class="slide slide__003" title="The Ride Journal"></div>
+          <div class="slide slide__004" title="The Ride Journal"></div>
         </div>
         <div class="social-media">
           <a href="http://twitter.com/TheRideJournal" target="_blank" class="social-media__twitter"><i class="social-media--icon icon-twitter"></i> @TheRideJournal</a>
@@ -86,21 +85,21 @@
     </div>
 
     <div class="row row--bordered">
-      <section id="stockists" class="stockists">
+      <section id="stockists" class="stockists js-stockists">
         <h2 class="title title--centered">Stockists</h2>
-        <nav class="stockists__nav stockists__nav--centered">
+        <nav class="stockists__nav stockists__nav--centered js-stockist-regions">
           <ul>
-            <li class="selected" data-region="uk">United Kingdom</li><li data-region="europe">Europe</li><li data-region="us">United States</li><li data-region="row">Rest of world</li><li data-region="online">Online Stockists</li>
+            <li class="selected" data-region="uk-london">United Kingdom</li><li data-region="europe">Europe</li><li data-region="usa">United States</li><li data-region="row">Rest of world</li><li data-region="online">Online Stockists</li>
           </ul>
         </nav>
 
-        <div class="stockists__master">
-          <nav class="stockists__nav">
+        <div class="stockists__master js-stockist-lists">
+          <nav class="stockists__nav js-uk-stockist-regions">
             <ul>
               <li class="selected" data-region="london">London</li><li data-region="nationwide">Nationwide</li>
             </ul>
           </nav>
-          <ul class="stockists__list">
+          <ul class="stockists__list js-stockists-online">
             <li><a target="_blank" href="http://www.godspeedshop.co.uk">Godspeed Shop</a></li>
             <li><a target="_blank" href="http://www.kinokostore.com">Kinoko</a></li>
             <li><a target="_blank" href="http://www.morethan21bends.com">More Than 21 Bends</a></li>
@@ -109,7 +108,7 @@
             <li><a target="_blank" href="http://www.pedlars.co.uk/">Pedlars</a></li>
             <li><a target="_blank" href="http://www.vettedshop.com/">Vetted</a></li>
           </ul>
-          <ul class="stockists__list stockists__list--visible">
+          <ul class="stockists__list stockists__list--visible js-stockists-uk-london">
             <li class="selected" data-address="39 Monmouth Street,London,WC2H 9DD,UK">Albam Clothing, Covent Garden</li>
             <li data-address="286 Upper Street,London,N1 2TZ,UK">Albam Clothing, Islington</li>
             <li data-address="111a Commercial Street,London,Spitalfields Market,E1 6BG,UK">Albam Clothing, Spitalfields</li>
@@ -128,7 +127,7 @@
             <li data-address="The Goods Yard,Manette Street,London,W1D 4AT,UK">W&amp;G Foyles</li>
             <li data-address="Cromwell Road,London,SW7 2RL,UK">V&amp;A</li>
           </ul>
-          <ul class="stockists__list">
+          <ul class="stockists__list js-stockists-uk-nationwide">
             <li data-address="Salts Mill,Victoria Road,Saltaire, Bradford,UK">1853 Gallery, Bradford</li>
             <li data-address="46 The Strand,Exmouth,Devon,EX8 1AL,UK">BikeLands, Exmouth</li>
             <li data-address="Ski Road,Aviemore,PH22 1QH,UK">Bothy Bikes, Aviemore</li>
@@ -155,7 +154,7 @@
             <li data-address="1 Crown Avenue,Inverness,IV2 3NF,UK">Velocity, Inverness</li>
             <li data-address="West Bretton,Wakefield,WF4 4LG,UK">Yorkshire Sculpture Park, Wakefield</li>
           </ul>
-          <ul class="stockists__list">
+          <ul class="stockists__list js-stockists-europe">
             <li data-address="Houtkopersdwarsstraat 3,Amsterdam,1011 NK ,Netherlands">290 Square Meters, Amsterdam</li>
             <li data-address="Kleiner Schäferkamp 12,20357 Hamburg,Germany">AHOI VELO, Hamburg</li>
             <li data-address="Spui 14-16,1012 XA, Amsterdam, Netherlands">Athenaeum Newscentre, Amsterdam</li>
@@ -170,7 +169,7 @@
             <li data-address="Im Viadukt-Bogen A,Viaduktstrasse,CH 8005,ZURICH,GERMANY">Stilrad, Zurich</li>
             <li data-address="Plaza de las Salesas 2, 28004 Madrid, Spain">Slowroom, Madrid</li>
           </ul>
-          <ul class="stockists__list">
+          <ul class="stockists__list js-stockists-usa">
             <li data-address="100 Boyd Street, Carrboro, NC 27510, USA">Back Alley Bikes, Carrboro</li>
             <li data-address="1618 Lucile Ave,Los Angeles,CA 90026, USA">Golden Saddle Cyclery, Los Angeles</li>
             <li data-address="766 Valencia Street,San Francisco,California,USA">Mission Bicycle, San Francisco</li>
@@ -179,13 +178,13 @@
             <li data-address="112 Columbus Avenue,Holyoke,MA 01040,USA">Speed &amp; Sprocket Cycle Works, Holyoke</li>
             <li data-address="3408 Navajo Street,Denver,CO 80211,USA">Walled In Magazines, Denver</li>
           </ul>
-          <ul class="stockists__list">
+          <ul class="stockists__list js-stockists-row">
             <li data-address="3a Georgina St,Newtown NSW 2042,Australia">Cheeky Transport, Newtown, Australia</li>
-            <li data-address="19 Bras Basah Complex,BLK 231,Bain Street,Singapore 180 231">Basheer Graphics, Singapore</li>
-            <li data-address="A15/23 Ray Road,Epping,NSW,2121,Australia">Good Fuel co, Epping, Australia</li>
+            <li data-address="19 Bras Basah Complex,BLK 231,Bain Street, Singapore 180 231">Basheer Graphics, Singapore</li>
+            <li data-address="A15/23 Ray Road,Epping,NSW 2121,Australia">Good Fuel co, Epping, Australia</li>
             <li data-address="9002 Quartz Road,Whitehorse,Y1A 2Z5,Canada">Icycle sports, Whitehorse, Canada</li>
-            <li data-address="155 King St  Newtown  NSW 2042 Australia">Mag Nation, Newtown, Australia</li>
-            <li data-address="88 Elizabeth St  Melbourne  Victoria 3000 Australia">Mag Nation, Melbourne, Australia</li>
+            <li data-address="155 King St Newtown ,NSW 2042, Australia">Mag Nation, Newtown, Australia</li>
+            <li data-address="88 Elizabeth St , Melbourne , Victoria 3000, Australia">Mag Nation, Melbourne, Australia</li>
             <li data-address="Al Madaar St, Dubai">The Magazine Shop, Dubai, United Arab Emirates</li>
             <li data-address="610 Darling Street,Rozelle 2039,AUSTRALIA">Maplestore, Rozelle, Australia</li>
             <li data-address="Cysta Grand Building,2-2-12, Nishishinsaibashi, Chuo-ku,Osaka,Japan">Standard Bookstore, Osaka, Japan</li>
@@ -193,21 +192,21 @@
           </ul>
         </div>
         <div class="stockists__detail">
-          <div class="stockists__map">
+          <div class="stockists__map js-stockists-location">
             <img src="" alt="">
-          </div><div class="stockists__address">
+          </div><div class="stockists__address js-stockists-location">
             <p></p>
           </div>
           <div>
             <p>
-            If you run a shop, or know someone who runs a shop, that would be
-            interested in stocking The Ride Journal then please do get in touch. We
-            are always happy to expand our network of stockists and get the journal
-            out to more people.
+              If you run a shop, or know someone who runs a shop, that would be
+              interested in stocking The Ride Journal then please do get in touch.
+              We are always happy to expand our network of stockists and get the
+              journal out to more people.
             </p>
             <p>
-            If you <a href="#contact"><em>contact us</em></a> we will be more than happy to
-            discuss details with you.
+              If you <a href="#contact"><em>contact us</em></a> we will be more
+              than happy to discuss details with you.
             </p>
           </div>
         </div>
@@ -218,12 +217,13 @@
       <section id="past-issues" class="downloads">
         <h2 class="title title--centered">Download past issues</h2>
         <p class="downloads__description">
-        We have been very lucky in that we have sold out of all previous issues.
-        We know that this means some of you have not been able to get hold of a copy in the flesh.
-        For this reason we have put up these previous issues as FREE PDF downloads.
-        No need to pay a penny, just wait for the files to download (they may take a little while as they are about 50 mb)
-        and enjoy the great articles and pieces that have appeared.
-        It may not feel or smell the same as having a physical copy but hey, it is free.
+          We have been very lucky in that we have sold out of all previous issues.
+          We know that this means some of you have not been able to get hold of a
+          copy in the flesh. For this reason we have put up these previous issues
+          as FREE PDF downloads. No need to pay a penny, just wait for the files
+          to download (they may take a little while as they are about 50 mb) and
+          enjoy the great articles and pieces that have appeared. It may not feel
+          or smell the same as having a physical copy but hey, it is free.
         </p>
         <div class="downloads__cover-gallery">
           <figure class="downloads__cover">
@@ -266,48 +266,48 @@
         <h2 class="title title--centered">How to contribute to The&nbsp;Ride&nbsp;Journal</h2>
         <div class="column">
           <p>
-          So you are interested in contributing something to The Ride Journal? That’s
-          great news as we are always on the lookout for riders who have an epic/
-          personal/ soulful/ interesting/ emotive story to tell. We are also happy
-          to hear from photographers and illustrators.
+            So you are interested in contributing something to The Ride Journal? That’s
+            great news as we are always on the lookout for riders who have an epic/
+            personal/ soulful/ interesting/ emotive story to tell. We are also happy
+            to hear from photographers and illustrators.
           </p>
           <p>
-          I’m afraid we can’t promise that your piece will be printed but I can
-          guarantee we will read it. I’m sure you can understand that we want to
-          keep the quality of the journal as high as possible and also that we
-          don’t cover the same subjects again and again.
+            I’m afraid we can’t promise that your piece will be printed but I can
+            guarantee we will read it. I’m sure you can understand that we want to
+            keep the quality of the journal as high as possible and also that we
+            don’t cover the same subjects again and again.
           </p>
           <p>
-          So with the negatives out of the way, what should you write about?
-          That’s up to you. Maybe you could start by looking at where you ride?
-          What you ride? Who you ride with? Are there places that mean something
-          special, or a yearly ride or race, or a person who you only know through
-          bikes? A shop that you spend too much time and money at? A season that
-          you look forward to? Is there a special moment that sums up why you
-          ride? A feeling you’re chasing? The pieces we have enjoyed most are the
-          ones that have given us an insight into someone else’s world. The known
-          part is the bikes, these are the reference we all have, the unknown is
-          what it means to you personally, that is what we’re after.
+            So with the negatives out of the way, what should you write about?
+            That’s up to you. Maybe you could start by looking at where you ride?
+            What you ride? Who you ride with? Are there places that mean something
+            special, or a yearly ride or race, or a person who you only know through
+            bikes? A shop that you spend too much time and money at? A season that
+            you look forward to? Is there a special moment that sums up why you
+            ride? A feeling you’re chasing? The pieces we have enjoyed most are the
+            ones that have given us an insight into someone else’s world. The known
+            part is the bikes, these are the reference we all have, the unknown is
+            what it means to you personally, that is what we’re after.
           </p>
         </div><div class="column">
           <p>
-          Unfortunately we can’t pay contributors. We’re too small and the amount
-          of illustrators and writers means we’d only be offering an insult. So
-          instead we don’t even pay ourselves. All profits from the journal are
-          donated to a number of charities. Cycling has given us so much that it’s
-          good to be able to give something back to other people while also
-          producing something good to read. If you are happy with this then we
-          would love to read that amazing tale you have to tell. You can either
-          get in touch to talk about any ideas you have, or any other questions,
-          or you can get writing and send over a draft when you are done.
+            Unfortunately we can’t pay contributors. We’re too small and the amount
+            of illustrators and writers means we’d only be offering an insult. So
+            instead we don’t even pay ourselves. All profits from the journal are
+            donated to a number of charities. Cycling has given us so much that it’s
+            good to be able to give something back to other people while also
+            producing something good to read. If you are happy with this then we
+            would love to read that amazing tale you have to tell. You can either
+            get in touch to talk about any ideas you have, or any other questions,
+            or you can get writing and send over a draft when you are done.
           </p>
           <p>
-          If you are going straight ahead and writing something now, about 750-800
-          words would be a splendid size that<br>we could use.
+            If you are going straight ahead and writing something now, about
+            750-800 words would be a splendid size that<br>we could use.
           </p>
           <p>
-          We look forward to hearing from you at<br>
-          <a href="#contact"><em>The Ride Journal</em></a>
+            We look forward to hearing from you at<br>
+            <a href="#contact"><em>The Ride Journal</em></a>
           </p>
         </div>
       </section>
@@ -315,43 +315,70 @@
 
     <div class="row row--bordered">
       <section id="our-history">
-        <h2 class="title title--centered">The history of The Ride Journal</h2>
+        <h2 class="title title--centered">The History of The Ride Journal</h2>
         <div class="column">
           <p>
-          The fact that you’ve made it here shows that you love bikes and are looking for something different to the other magazines and journals out there.
+            The fact that you’ve made it here shows that you love bikes and are
+            looking for something different to the other magazines and journals
+            out there.
           </p>
           <p>
-          That’s good because that’s what The Ride Journal has been created to be. Born, as all good things are, out of a conversation over Mexican food and Pacifico beers, The Ride is an all-encompassing read that was started in 2008.
+            That’s good because that’s what The Ride Journal has been created to
+            be. Born, as all good things are, out of a conversation over Mexican
+            food and Pacifico beers, The Ride is an all-encompassing read that
+            was started in 2008.
           </p>
           <p>
-          The idea was to create a journal filled with personal stories. We know that most people who share our obsession with bikes don’t want to be pigeon-holed as roadies, freeriders, track racers, BMXers, XC riders or even commuters. They are just riders. So we wanted to create something for them, and also for us. Something that crosses both cycling and international borders. Bikes have changed people’s lives in so many ways and we wanted to gather a small selection of<br>these tales.
+            The idea was to create a journal filled with personal stories. We
+            know that most people who share our obsession with bikes don’t want
+            to be pigeon-holed as roadies, freeriders, track racers, BMXers, XC
+            riders or even commuters. They are just riders. So we wanted to
+            create something for them, and also for us. Something that crosses
+            both cycling and international borders. Bikes have changed people’s
+            lives in so many ways and we wanted to gather a small selection
+            of<br>these tales.
           </p>
           <p>
-          We didn’t want to give reviews or race reports, we wanted to get under the skin and expose the passion that<br>flows through riders veins.
+            We didn’t want to give reviews or race reports, we wanted to get
+            under the skin and expose the passion that<br>flows through riders
+            veins.
           </p>
         </div><div class="column">
           <p>
-          Once the seed was sown we spread the word to people from all across the globe. Initially we wondered if it was just us who wanted to see such a journal; evidently we were wrong. From all kinds of riders we began to get favourable responses, people asking why this hasn’t been done before and how they could join us? A snowball effect took place and what was planned to be 80 pages soon grew into the beautiful monster sized journal we have finally ended up with (we are now at almost 200 pages, and chose to have far less advertising than<br>most other magazines).
+            Once the seed was sown we spread the word to people from all across
+            the globe. Initially we wondered if it was just us who wanted to see
+            such a journal; evidently we were wrong. From all kinds of riders we
+            began to get favourable responses, people asking why this hasn’t
+            been done before and how they could join us? A snowball effect took
+            place and what was planned to be 80 pages soon grew into the
+            beautiful monster sized journal we have finally ended up with
+            (we are now at almost 200 pages, and chose to have far less
+            advertising than<br>most other magazines).
           </p>
           <p>
-          As well as the incredible writing we also wanted the magazine to be visually striking. We approached our favourite artists, illustrators and photographers and they have helped give The Ride Journal its stunning visual style.
+            As well as the incredible writing we also wanted the magazine to be
+            visually striking. We approached our favourite artists, illustrators
+            and photographers and they have helped give The Ride Journal its
+            stunning visual style.
           </p>
           <p>
-          Our final decision was that we were not in this to make money, just to give something back to the world of cycling that we love. For this reason we decided not to pay ourselves, instead we donate all profits from the magazine to<br>various charities.
+            Our final decision was that we were not in this to make money,
+            just to give something back to the world of cycling that we love.
+            For this reason we decided not to pay ourselves, instead we donate
+            all profits from the magazine to<br>various charities.
           </p>
-          <p>
-          <em>The Ride Journal</em>
-          </p>
+          <p><em>The Ride Journal</em></p>
         </div>
       </section>
     </div>
 
     <div class="row">
-      <section id="contact">
+      <section id="contact" class="contact">
         <div class="column">
           <h2 class="title">Contact us</h2>
           <p>
-          If you would like to give us any feedback or would like to get involved with The Ride Journal drop us a line.
+            If you would like to give us any feedback or would like to get
+            involved with The Ride Journal drop us a line.
           </p>
 
           <p class="contact__email">

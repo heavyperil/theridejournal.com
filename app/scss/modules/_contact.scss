@@ -1,3 +1,21 @@
 .contact__email a {
   border-bottom: 1px dotted $color-dark-grey;
 }
+
+.contact label {
+  display: block;
+  color: $color-dark-grey;
+  margin-bottom: 0.4rem;
+}
+
+.contact input[type="email"] {
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  font: {
+    family: $font-form;
+    size: 1.2rem;
+    weight: bold;
+  }
+  color: $color-dark-grey;
+}
