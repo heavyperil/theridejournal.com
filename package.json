@@ -22,12 +22,24 @@
   "jspm": {
     "directories": {},
     "dependencies": {
+      "cycle": "github:malsup/cycle@^3.0.3",
       "jquery": "github:components/jquery@^2.1.4"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.1.13",
       "babel-runtime": "npm:babel-runtime@^5.1.13",
       "core-js": "npm:core-js@^0.9.4"
+    },
+    "overrides": {
+      "github:malsup/cycle@3.0.3": {
+        "format": "global",
+        "main": "jquery.cycle.lite",
+        "shim": {
+          "jquery.cycle.lite": [
+            "jquery"
+          ]
+        }
+      }
     }
   }
 }
