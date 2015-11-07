@@ -21,7 +21,7 @@ var autoprefixer = require('gulp-autoprefixer'),
 // Configuration
 
 var paths = {
-  files: ['./app/CNAME'],
+  files: ['./app/CNAME', './app/humans.txt'],
   fonts: ['./app/fonts/*'],
   html:  ['./app/*.html'],
   img:   ['./app/images/**/*'],
@@ -118,7 +118,7 @@ gulp.task('html', function () {
 });
 
 gulp.task('rev', function() {
-  var revAll = new RevAll({dontRenameFile: [/\.html/, /CNAME$/]});
+  var revAll = new RevAll({dontRenameFile: [/\.html/, /CNAME$/, /humans\.txt/], dontUpdateReference: [/humans\.txt/]});
 
   gulp.src('dist/**')
   .pipe(revAll.revision())
