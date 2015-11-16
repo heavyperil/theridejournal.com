@@ -56,3 +56,11 @@ em {
  ul {
    margin-top: 0;
  }
+
+ .alert--success {
+   display: none;
+   padding: 2rem 0;
+   background-color: rgb(246, 237, 209);
+   text-align: center;
+   cursor: pointer;
+ }

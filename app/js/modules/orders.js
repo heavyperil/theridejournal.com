@@ -5,6 +5,8 @@ let orders = {
     this.$_toggle  = $(orderToggleSelector);
     this.$_order10 = $('.order__form-10');
     this.$_order9  = $('.order__form-9');
+    this.$_flash   = $('.alert--success');
+    this._showThankYou();
     this._bindUI();
   },
 
@@ -21,6 +23,16 @@ let orders = {
         this.$_toggle.text('Pre-order issue 10');
       }
     });
+  },
+
+  _showThankYou: function() {
+    if (window.location.search.match(/success/)) {
+      this.$_flash.show();
+      this.$_flash.on('click', event => {
+        event.preventDefault();
+        this.$_flash.hide();
+      });
+    }
   }
 };
 
