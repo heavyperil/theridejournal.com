@@ -20,7 +20,7 @@ let orders = {
       if (this.$_toggle.text().indexOf('10') >= 0) {
         this.$_toggle.text('Order issue 9');
       } else {
-        this.$_toggle.text('Pre-order issue 10');
+        this.$_toggle.text('Order issue 10');
       }
     });
   },
