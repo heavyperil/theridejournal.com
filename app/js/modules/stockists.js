@@ -9,7 +9,6 @@ let stockists = {
     this.$_stockistLists       = this.$_el.find('.js-stockist-lists');
     this.$_stockistLinks       = this.$_el.find('.stockists__list li');
     this.$_stockistDetail      = this.$_el.find('.stockists__detail');
-    this.$_ukSubNav            = this.$_el.find('.js-uk-stockist-regions');
     this._bindUI();
 
     this.$_stockistLinks.filter('[data-address]').first().trigger('click');
@@ -25,18 +24,6 @@ let stockists = {
       } else {
         this.$_stockistLists.find(`.js-stockists-${region} li`).first().trigger('click');
       }
-
-      if (region === 'uk-london') {
-        this.$_ukSubNav.removeClass('stockists__nav--hidden');
-      } else {
-        this.$_ukSubNav.addClass('stockists__nav--hidden');
-      }
-    });
-
-    this.$_ukSubNav.on('click', 'li', event => {
-      let region = $(event.target).attr('data-region');
-      showStockistList(`uk-${region}`, this.$_stockistLists);
-      this.$_stockistLists.find(`.js-stockists-uk-${region} li`).first().trigger('click');
     });
 
     this.$_el.on('click', 'li[data-address]', event => {
