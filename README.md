@@ -1,6 +1,6 @@
 # The Ride Journal
 
-It’s a magazine about cycling innit.
+It’s a magazine about cycling innit. And an excuse to play around with pieces of JS tooling.
 
 ## Development
 
